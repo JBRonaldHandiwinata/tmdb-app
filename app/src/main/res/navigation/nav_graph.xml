@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/faveFragment">
+
+    <fragment
+        android:id="@+id/faveFragment"
+        android:name="com.ronald.themoviedb.ui.main.fragments.FaveFragment"
+        android:label="fragment_fave"
+        tools:layout="@layout/fragment_fave" >
+        <action
+            android:id="@+id/action_faveFragment_to_detailFragment2"
+            app:destination="@id/detailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/popularFragment"
+        android:name="com.ronald.themoviedb.ui.main.fragments.PopularFragment"
+        android:label="fragment_movies"
+        tools:layout="@layout/fragment_movies" >
+        <action
+            android:id="@+id/action_popularFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/topratedFragment"
+        android:name="com.ronald.themoviedb.ui.main.fragments.TopratedFragment"
+        android:label="TopratedFragment" >
+        <action
+            android:id="@+id/action_topratedFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.ronald.themoviedb.ui.detail.DetailFragment"
+        android:label="DetailFragment" />
+</navigation>
